@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-
 * {
     box-sizing: border-box;
 }
@@ -10,7 +9,7 @@
 /* Add a dark backgound for the whole page and define font*/
 body {
     color: #fff;
-    background-color: #000;
+    background-color: rgb(31 41 55);
     font-family: Ubuntu;
 }
 
@@ -22,21 +21,8 @@ body {
     align-items: center;
 }
 
+/* Styling and Adding the cool hover effect on nav links */
 .nav a {
-    color: #fff;
-    padding: 15px 20px;
-    text-decoration: none;
-    text-align: center;
-}
-
-/* 
- .button-wrapper {
-    display: inline-block;
-    width: fit-content;
-} */
-
-/* Styling and Adding the cool hover effect on links */
-a {
     display: block;
     font-size: 20px;
     font-family: inherit;
@@ -47,16 +33,22 @@ a {
     transition: all .25s;
 }
 
-a:hover {
+.nav a:hover {
     letter-spacing: 15px;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
 }
 
 /* ############# End of Styling the navigation ############# */
 
 
 /* ############# Styling the content section ############# */
+/* Extra padding */
 .padding-large {
     padding: 5em 5em;
 }
@@ -86,28 +78,325 @@ a:hover {
     text-align: justify;
 }
 
-/* alingning text to center */
+/* aligning text to center */
 .content .subtitle {
     text-align: center;
 }
 
 /* ############# End of Styling the content section ############# */
 
+/* ############# Styling the footer section ############# */
+.footer {
+    text-align: center;
+}
+
+/* ############# End of Styling the footer section ############# */
+
+/* ############# Style logos ############# */
+.logo {
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+}
+
+.social {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+
+/* Add the border shadow on logos */
+.social:hover,
+.logo:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.193), 0 6px 20px 0 rgba(255, 255, 255, 0.248);
+    border-radius: 40%;
+}
+
+/* ############# end of Styling logos ############# */
+
+/* align the date */
+.date {
+    text-align: center;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* ########################## FORM & MODAL ######################### */
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #444442;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #444442;
+    color: white;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* ################## FORM ###############################3 */
+
+/* inputs  */
+input:focus~label,
+textarea:focus~label,
+input:valid~label,
+textarea:valid~label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 700px) {
+    .styled-input {
+        width: 100%;
+    }
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide {
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
+input:focus~span,
+textarea:focus~span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+/* Submit Button */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* button */
+button {
+    width: 270px;
+    height: 80px;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.check-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+
+/* Style the SVG */
+.check-box svg {
+    width: 40px;
+    margin: 20px;
+}
+
+svg path {
+    stroke-width: 3;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+
+.active {
+    background: #ff2b75;
+    transition: 1s;
+}
+
+.active .check-box {
+    right: 0;
+    opacity: 1;
+    transition: 1s;
+}
+
+.active p {
+    margin-right: 125px;
+    transition: 1s;
+}
+
+.active svg path {
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+/* ########################## Form Modal ########################3 */
+
 
 /* Responsive */
-@media screen and (max-width: 600px) {
+/* adding rows and deviding sections using flexboxes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    flex: 50%;
+    height: auto;
+}
+
+.right {
+    flex: 50%;
+}
+
+.center {
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 700px) {
 
     .wrapper,
-    .nav {
+    .nav,
+    .row {
         flex-direction: column;
     }
 
-    a:hover {
+    .row {
+        text-align: center;
+    }
+
+    .nav a:hover {
         letter-spacing: 8px;
         border-top: 2px solid #fff;
         border-bottom: 2px solid #fff;
     }
-
 
     .padding-large {
         padding: 2em 2em;
