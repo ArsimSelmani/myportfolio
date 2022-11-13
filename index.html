@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="Arsim Selmani">
     <meta name="Description" content="My Portfolio">
-    <meta name="Keywords" content=", ">
+    <meta name="Keywords" content="Portfolio, software, programmer ">
     <link rel="stylesheet" href="./css/css.css">
     <title>Arsim's Portfolio</title>
 </head>
@@ -15,9 +15,8 @@
 <body>
     <!-- Navigation bar -->
     <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Contact Me</a>
+        <a href="./index.html">Home</a>
+        <a class="contact-btn">Contact Me</a>
     </div>
 
     <!-- Page Content -->
@@ -27,13 +26,12 @@
             <h2 class="subtitle">Hello, i'm</h2>
             <h1 class="title">Arsim Selmani.</h1>
             <h2 class="subtitle">a Software Engineer</h2>
-
         </header>
 
         <!-- About Section -->
         <div class="content padding-large">
-            <h2 class="subtitle" style="margin 20px">Who am I?</h2>
-            <hr style="width:200px;">
+            <h2 class="subtitle">Who am I?</h2>
+            <hr style="width: 200px;">
             <p class="content-text">
                 Diligent software engineer with a Bachelor degree in Computer Science and Engineering. Eager to join
                 <strong>Starlabs LLC.</strong> to
@@ -45,30 +43,156 @@
         <!-- Experience section -->
         <div class="content padding-large">
             <h2 class="subtitle">My Experience</h2>
-            <hr style="width:250px;">
-
-
+            <hr style="width: 250px;">
+            <div class="row" style="padding-top: 50px;">
+                <div class="left">
+                    <a href="https://ictkosovo.eu/"> <img class="logo" src="./img/ict.png"
+                            alt="ICT for Kosovo's Growth"></a>
+                </div>
+                <div class="right">
+                    <p class="date">September 2021 - February 2022</p>
+                    <p class="subtitle"> ICT for Kosovo's Growth</p>
+                    <p>Successfuly fineshed the <b> Web Application Development</b> program from ICT, including
+                        modules:
+                        Web Development, IT Project Management, Soft Skill Training. </p>
+                </div>
+                <div class="center nav" style="padding-top: 30px;">
+                    <a type="button" href="https://visitkosovo.000webhostapp.com/index.html">Click here
+                        to see the final project </a>
+                </div>
+            </div>
         </div>
-
-
         <!-- Skills section -->
         <div class="content padding-large">
-            <h2 class="subtitle">Some of my skills</h2>
-            <hr style="width:250px;">
-
+            <h2 class="subtitle">Worked with:</h2>
+            <hr style="width: 250px;">
+            <div class="row" style="padding-top: 50px">
+                <a href=""> <img class="logo" src="./img/html.svg" alt="HTML"></a>
+                <a href=""> <img class="logo" src="./img/css.svg" alt="CSS"></a>
+                <a href=""> <img class="logo" src="./img/js.svg" alt="JAVASCRIPT"></a>
+                <a href="https://www.php.net/"> <img class="logo" src="./img/php.svg" alt="PHP"></a>
+                <a href="https://codex.wordpress.org/Main_Page"> <img class="logo" src="./img/wordpress.svg"
+                        alt="WORDPRESS"></a>
+                <a href="https://www.java.com/en/"> <img class="logo" src="./img/java.svg" alt="JAVA"></a>
+                <a href="https://laravel.com/"> <img class="logo" src="./img/laravel.svg" alt="laravel"></a>
+                <a href="https://getbootstrap.com/"> <img class="logo" src="./img/bootstrap.svg" alt="bootstrap"></a>
+            </div>
         </div>
-
         <!-- END PAGE CONTENT -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="subtitle">If you want to make my Portfolio look richer click the button below and</p>
+            <div class="center nav" style="padding-top: 5px;">
+                <a type="button" class="contact-btn">Contact Me! </a>
+            </div>
+            <P>or get in touch through: </P>
+            <div class="row">
+                <a href="https://www.linkedin.com/in/arsim-selmani/"> <img class="social" src="./img/linkedin.svg"
+                        alt="linkedin"></a>
+                <a href="https://github.com/ArsimSelmani/myportfolio"> <img class="social" src="./img/github.svg"
+                        alt="github"></a>
+                <a href="https://www.facebook.com/"> <img class="social" src="./img/facebook.svg" alt="facebook"></a>
+                <a href="https://www.twitter.com/"> <img class="social" src="./img/twitter.svg" alt="twitter"></a>
+            </div>
+        </div>
+        <!-- End of Footer -->
     </div>
+    <!-- The Modal -->
+    <div id="contactModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <p class="title">Let's get in Touch!</p>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm" action="#">
+                    <!-- Normaly we would have more validation and send the data to store on a database/server -->
+                    <div class="row">
+                        <div class="styled-input wide">
+                            <input type="text" required />
+                            <label>Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="styled-input wide">
+                            <input type="text" required />
+                            <label>Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="styled-input wide">
+                            <input type="text" required />
+                            <label>Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="styled-input wide">
+                            <textarea required></textarea>
+                            <label>Message</label>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button id="btn">
+                            <p id="btnText">Send Message</p>
+                            <div class="check-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                    <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+    <!-- The following script launches the Modal with the Contact Form on click of a button -->
+    <script type="text/javascript">
+        var modal = document.getElementById('contactModal');
+        var btns = document.getElementsByClassName('contact-btn');
+        var span = document.getElementsByClassName("close")[0];
 
+        [].forEach.call(btns, function (el) {
+            el.onclick = function () {
+                modal.style.display = "block";
+            }
+        })
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
+    <!-- The following Script adds a 'thanks' note on the submit button -->
+    <script type="text/javascript">
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
 
-
-
-    <!-- <div class="button-wrapper">
-    <a href="#">Contact Me!</a>
-</div> -->
+        btn.onclick = () => {
+            btnText.innerHTML = "Thanks";
+            btn.classList.add("active");
+        };
+        // check if all required fields are filled
+        document.getElementById("btn").onclick = function () {
+            let allAreFilled = true;
+            document.getElementById("contactForm").querySelectorAll("[required]").forEach(function (i) {
+                if (!allAreFilled) return;
+                if (!i.value) { allAreFilled = false; return; }
+            })
+            if (!allAreFilled) {
+                alert('Please Fill all required fields!');
+            }
+            btn.onclick = () => {
+                btnText.innerHTML = "Thanks";
+                btn.classList.add("active");
+            };
+        };
+    </script>
 </body>
 
 </html>
